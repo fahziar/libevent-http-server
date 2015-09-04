@@ -1,5 +1,4 @@
 #include <sys/stat.h>
-#include <alloca.h>
 
 #include <event2/event.h>
 #include <event2/http.h>
@@ -55,7 +54,7 @@ void http_cb(struct evhttp_request *r, void *arg){
 		evhttp_add_header(headers, "Content-Length", content_length);
 
 		//kirim file ke browser
-		evbuffer_add_printf(buffer, "%s", html);
+		evbuffer_add(buffer, html, st.st_size);
 		evhttp_send_reply(r, HTTP_OK, "OK", buffer);
 
 		evbuffer_free(buffer);
