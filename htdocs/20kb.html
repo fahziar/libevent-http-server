@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0051)http://www.unixguide.net/linux/linuxshortcuts.shtml -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="GENERATOR" content="Mozilla/4.7 [en] (Win98; U) [Netscape]">
+    <title>Linux Newbie Guide: Shortcuts And Commands</title>
+    <style id="style-1-cropbar-clipper">
+    /* Copyright 2014 Evernote Corporation. All rights reserved. */
+    
+    .en-markup-crop-options {
+        top: 18px !important;
+        left: 50% !important;
+        margin-left: -100px !important;
+        width: 200px !important;
+        border: 2px rgba(255, 255, 255, .38) solid !important;
+        border-radius: 4px !important;
+    }
+    
+    .en-markup-crop-options div div:first-of-type {
+        margin-left: 0px !important;
+    }
+    </style>
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" link="#3366FF" vlink="#CC33CC" alink="#FF0000" cz-shortcut-listen="true">
+    <center>
+        <ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent">
+            <ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent">
+                <iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe>
+            </ins>
+        </ins>
+    </center>
+    <br>
+    <hr width="100%"><b><font color="#000000"><font size="+2">Linux Shortcuts
+and Commands:</font></font></b><b><font color="#000000"><font size="+2"></font></font></b>
+    <p><a href="http://linux-newbie.sunsite.dk/">Linux Newbie
+Administrator Guide</a>
+        <br>by Stan and Peter Klimas
+    </p>
+    <p>This is a practical selection of the commands we use most often. Press
+        <tt>&lt;Tab&gt;</tt>
+        to see the listing of all available command (on your PATH). On my small home system, it says there are 2595 executables on my PATH.&nbsp; Many of these "commands" can be accessed from your favourite GUI front-end (probably KDE or Gnome) by clicking on the right menu or button. They can all be run from the command line.&nbsp; Programs that require GUI have to be run from a terminal opened under a GUI.
+    </p>
+    <p><b>Legend:</b>
+        <br>&lt;&gt; = single special or function key on the keyboard. For example &lt;Ctrl&gt; indicates the "control" key.
+        <br><i>italic</i> = name of the file or variable you probably want to substitute with your own.
+        <br>
+        <tt>fixed width</tt> = in-line Linux commands and filenames.
+    </p>
+    <p><b>Notes for the UNIX Clueless:</b>
+        <br>1. LINUX IS CASE-SENSITIVE. For example: Netscape, NETSCAPE and nEtscape are three different commands. Also my_filE, my_file, and my_FILE are three different files. Your user login name and password are also case sensitive. (This goes with the tradition of UNIX and the "c" programming language being case sensitive.)
+        <br>2. Filenames can be up to 256 characters long and can contain letters, numbers, "." (dot), "_" (underscore), "-" (dash), plus some other not recommended characters.
+        <br>3. Files with names starting with "." are normally not shown by the
+        <tt>ls</tt>
+        (list) or dir commands. Think of these files as "hidden". Use
+        <tt>ls -a</tt>&nbsp; (list with the option "all") to see these files.
+        <br>4. "/" is an equivalent to DOS "\" (root directory, meaning the parent of all other directories).
+        <br>5. Under Linux, all directories appear under a single directory tree (there are no DOS-style drive letters).
+        <br>6. In a configuration file, a line starting with # is a comment.
+    </p>
+    <h2>
+<a name="shortcuts"></a>7.1 Linux essential shortcuts and sanity commands</h2>
+    <tt>&lt;Ctrl&gt;&lt;Alt&gt;&lt;F1&gt;</tt>
+    <br>Switch to the first text terminal. Under Linux you can have several (6 in standard setup) terminals opened at the same time.
+    <p>
+        <tt>&lt;Ctrl&gt;&lt;Alt&gt;&lt;Fn&gt; </tt>(n=1..6)
+        <br>Switch to the nth text terminal.
+    </p>
+    <p>
+        <tt>tty</tt>
+        <br>Print the name of the terminal in which you are typing this command.
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;&lt;Alt&gt;&lt;F7&gt;</tt>
+        <br>Switch to the first GUI terminal (if X-windows is running on this terminal).
+    </p>
+    <p>&nbsp;
+        <tt>&lt;Ctrl&gt;&lt;Alt&gt;&lt;Fn&gt; </tt>(n=7..12)
+        <br>Switch to the nth GUI terminal (if a GUI terminal is running on screen n-1). On default, nothing is running on terminals
+        <br>8 to 12, but you can run another server there.
+    </p>
+    <p>&nbsp;
+        <tt>&lt;Tab&gt;</tt>
+        <br>(In a text terminal) Autocomplete the command&nbsp; if there is only one option, or else show all the available options.
+        <br>THIS SHORTCUT IS GREAT! It even works at LILO prompt!
+    </p>
+    <p>&nbsp;
+        <tt>&lt;ArrowUp&gt;</tt>
+        <br>Scroll and edit the command history. Press &lt;Enter&gt; to execute.
+    </p>
+    <p>&nbsp;
+        <tt>&lt;Shift&gt;&lt;PgUp&gt;</tt>
+        <br>Scroll terminal output up. Work also at the login prompt, so you can scroll through your bootup messages.
+    </p>
+    <p>&nbsp;
+        <tt>&lt;Shift&gt;&lt;PgDown&gt;</tt>
+        <br>Scroll terminal output down.
+    </p>
+    <p>&nbsp;
+        <tt>&lt;Ctrl&gt;&lt;Alt&gt;&lt;+&gt;</tt>
+        <br>(in X-windows) Change to the next X-server resolution (if you set up the X-server to more than one resolution). For multiple resolutions on my standard SVGA card/monitor, I have the following line in the file
+        <tt>/etc/X11/XF86Config</tt>
+        (the first resolution starts on default, the largest determines the size of the "virtual screen"):
+        <br>
+        <tt>Modes "1024x768" "800x600" "640x480" "512x384" "480x300" "400x300" "1152x864"
+        </tt>
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;&lt;Alt&gt;&lt;-&gt;</tt>
+        <br>(in X-windows) Change to the previous X-server resolution.
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;&lt;Alt&gt;&lt;BkSpc&gt;</tt>
+        <br>(in X-windows) Kill the current X-windows server. Use if the X-windows server crushes and cannot be exited normally.
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;&lt;Alt&gt;&lt;Del&gt;</tt>
+        <br>Shut down the system and reboot. This is the normal shutdown command for a user at the text-mode console. Don't just press the "reset" button for shutdown!
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;c</tt>
+        <br>Kill the current process (mostly in the text mode for small applications).
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;d</tt>
+        <br>Log out from the current terminal.&nbsp; See also the next command.
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;d</tt>
+        <br>Send [End-of-File] to the current process. Don't press it twice else you also log out (see the previous command).
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;s</tt>
+        <br>Stop the transfer to the terminal.
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;q</tt>
+        <br>Resume the transfer to the terminal. Try if your terminal mysteriously stops responding.
+    </p>
+    <p>
+        <tt>&lt;Ctrl&gt;z</tt>
+        <br>Send the current process to the background.
+    </p>
+    <p>
+        <tt>exit</tt>
+        <br>Logout. I can also use
+        <tt>logout</tt> for the same effect.&nbsp; (If you have started a second shell, e.g., using
+        <tt>bash</tt> the second shell will be exited and you will be back in the first shell, not logged out.)
+    </p>
+    <p>
+        <tt>reset</tt>
+        <br>Restore a screwed-up terminal (a terminal showing funny characters) to default setting. Use if you tried to "cat" a binary file. You may not be able to see the command as you type it.
+    </p>
+    <p>
+        <tt>&lt;MiddleMouseButton&gt;</tt>
+        <br>Paste the text which is currently highlighted somewhere else. This is the normal "copy-paste" operation in Linux.&nbsp; (It doesn't work with Netscape and WordPerfect which use the MS Windows-style "copy-paste". It does work in the text terminal if you enabled "gpm" service using "setup".) Best used with a Linux-ready 3-button mouse (Logitech or similar) or else set "3-mouse button emulation").
+    </p>
+    <p>
+        <tt>~</tt>
+        <br>(tilde) My home directory (normally the directory
+        <tt>/home/my_login_name</tt>). For example, the command
+        <tt>cd ~/<i>my_dir</i></tt> will change my working&nbsp; directory to the subdirectory "<i>my_dir</i>" under my home directory.&nbsp; Typing just "cd" alone is an equivalent of the command "cd ~".
+    </p>
+    <p>
+        <tt>.</tt>
+        <br>(dot) Current directory. For example,
+        <tt>./my_program</tt> will attempt to execute the file "my_program" located in your current working directory.
+    </p>
+    <p>
+        <tt>..</tt>
+        <br>(two dots) Directory parent to the current one. For example, the command
+        <tt>cd ..
+        </tt> will change my current working directory one one level up.
+    </p>
+    <h2>
+<a name="sys_info_commands"></a>7.2 Common Linux commands--system info</h2>
+    <tt>pwd</tt>
+    <br>Print working directory, i.e., display the name of my current directory on the screen.
+    <p>
+        <tt>hostname</tt>
+        <br>Print the name of the local host (the machine on which you are working). Use
+        <tt> netconf </tt>(as root) to change the name of the machine.
+    </p>
+    <p>
+        <tt>whoami</tt>
+        <br>Print my login name.
+    </p>
+    <p>
+        <tt>id
+            <i>username</i></tt>
+        <br>Print user id (uid) and his/her group id (gid), effective id (if different than the real id) and the supplementary groups.
+    </p>
+    <p>
+        <tt>date</tt>
+        <br>Print or change the operating system date and time. E.g., I could change the date and time to 2000-12-31 23:57 using this command:
+        <br>
+        <tt>date 123123572000</tt>
+        <br>To set the hardware (BIOS) clock from the system (Linux) clock, use the command (as root)
+        <tt>setclock</tt>
+    </p>
+    <p>
+        <tt>time</tt>
+        <br>Determine the amount of time that it takes for a process to complete + other info. Don't confuse it with the
+        <tt>date</tt> command. E.g. I can find out how long it takes to display a directory content using:
+        <br>
+        <tt>time ls</tt>
+    </p>
+    <p>
+        <tt>who</tt>
+        <br>Determine the users logged on the machine.
+    </p>
+    <p>
+        <tt>rwho -a</tt>
+        <br>(=remote who) Determine all users logged on your network. The rwho service must be enabled for this command to run. If it isn't, run setup as root to enable "rwho".
+    </p>
+    <p>
+        <tt>finger
+            <i>user_name</i></tt>
+        <br>System info about a user. Try:
+        <tt>finger root</tt>
+    </p>
+    <p>
+        <tt>last</tt>
+        <br>Show listing of users last logged-in on your system.
+    </p>
+    <p>
+        <tt>history | more</tt>
+        <br>Show the last (1000 or so) commands executed from the command line on the current account. The "| more" causes the display to stop after each screenful.
+    </p>
+    <p>
+        <tt>uptime</tt>
+        <br>Show the amount of time since the last reboot.
+    </p>
+    <p>
+        <tt>ps</tt>
+        <br>(=print status) List the processes currently run by the current user.
+    </p>
+    <p>
+        <tt>ps axu | more</tt>
+        <br>List all the processes currently running, even those without the controlling terminal, together with the name of the user that owns each process.
+    </p>
+    <p>
+        <tt>top</tt>
+        <br>Keep listing the currently running processes, sorted by cpu usage (top users first). In KDE, you can get GUI-based Ktop from "K"menu under "System"-"Task Manager" (or by executing "ktop" in an X-terminal).
+    </p>
+    <p>
+        <tt>uname -a</tt>
+        <br>(= Unix name with option "all") Info on your (local) server. I can also use
+        <tt>guname</tt> (in X-window terminal) to display the info more nicely.
+    </p>
+    <p>
+        <tt>free</tt>
+        <br>Memory info (in kilobytes).
+    </p>
+    <p>
+        <tt>df -h</tt>
+        <br>(=disk free) Print disk info about all the filesystems (in human-readable form)
+    </p>
+    <p>
+        <tt>du / -bh | more</tt>
+        <br>(=disk usage) Print detailed disk usage for each subdirectory starting at the "/" (root) directory (in human legible form).
+    </p>
+    <p>
+        <tt>cat /proc/cpuinfo</tt>
+        <br>Cpu info--it show the content of the file
+        <tt>cpuinfo</tt>. Note that the files in the
+        <tt>/proc</tt> directory are not real files--they are hooks to look at information available to the kernel.
+    </p>
+    <p>
+        <tt>cat /proc/interrupts</tt>
+        <br>List the interrupts in use.
+    </p>
+    <p>
+        <tt>cat /proc/version</tt>
+        <br>Linux version and other info
+    </p>
+    <p>
+        <tt>cat /proc/filesystems</tt>
+        <br>Show the types of filesystems currently in use.
+    </p>
+    <p>
+        <tt>cat /etc/printcap</tt>
+        <br>Show the setup of printers.
+    </p>
+    <p>
+        <tt>lsmod</tt>
+        <br>(As root. Use
+        <tt>/sbin/lsmod</tt> to execute this command when you are a non-root user.) Show the kernel modules currently loaded.
+    </p>
+    <p>
+        <tt>set|more</tt>
+        <br>Show the current user environment.
+    </p>
+    <p>
+        <tt>echo $PATH</tt>
+        <br>Show the content of the environment variable "PATH". This command can be used to show other environment variables as well. Use "set" to see the full environment.
+    </p>
+    <p>
+        <tt>dmesg | less</tt>
+        <br>Print kernel messages (the content of the so-called kernel ring buffer). Press "q" to quit "less". Use
+        <tt>less /var/log/dmesg</tt>&nbsp; to see what "dmesg" dumped into this file right after the last system bootup.
+        <br>&nbsp;
+    </p>
+    <h2>
+<a name="Basic_operations"></a>7.3 Basic operations</h2>
+    <tt><i>any_command
+</i>--help |more</tt>
+    <br>Display a brief help on a command (works with most commands). "--help" works similar to DOS "/h" switch. The "more" pipe is needed if the output is longer than one screen.
+    <p>
+        <tt>man
+            <i>topic</i></tt>
+        <br>Display the contents of the system manual pages (help) on the topic. Try
+        <tt>man man</tt> first. Press "q" to quit the viewer. The command
+        <tt>info
+            <i>topic</i></tt>
+        works similar and may contain more up-to-date information. Manual pages can be hard to read. Try
+        <tt><i>any_command</i> --help</tt> for short, easy to digest help on a command. If more info needed, have a look to the directory
+        <tt>/usr/doc</tt>. To display manual page from a specific section, I may use something like in this example:&nbsp;
+        <tt>man 3 exit</tt> (this displays an info on the command
+        <tt>exit</tt> from section 3 of the manual pages).
+    </p>
+    <p>
+        <tt>apropos
+            <i>topic</i></tt>
+        <br>Give me the list of the commands that have something to to do with my topic.
+    </p>
+    <p>
+        <tt>help command</tt>
+        <br>Display brief info on a bash (shell) build-in command.
+    </p>
+    <p>
+        <tt>ls</tt>
+        <br>List the content of the current directory. Under Linux, the command "dir" is an alias to ls. Many users have "ls" to be an alias to "ls --color".
+    </p>
+    <p>
+        <tt>ls -al |more</tt>
+        <br>List the content of the current directory, all files (also those starting with a dot), and in a long form. Pipe the output through the "more" command, so that the display pauses after each screenful.
+    </p>
+    <p>
+        <tt>cd
+            <i>directory</i></tt>
+        <br>Change directory. Using "cd" without the directory name will take you to your home directory. "cd -" will take you to your previous directory and is a convenient way to toggle between two directories. "cd .." will take you one directory up.
+    </p>
+    <p>
+        <tt>cp
+            <i>source destination</i></tt>
+        <br>Copy files. E.g.,
+        <tt>cp /home/stan/existing_file_name .</tt>&nbsp; will copy a file to my current working directory. Use the "-r" option (for recursive) to copy the contents of whole directories, e.g. ,
+        <tt>cp -r my_existing/dir/ ~&nbsp;</tt> will copy a subdirectory under my current working directory to my home directory.
+    </p>
+    <p>
+        <tt>mcopy
+            <i>source destination</i></tt>
+        <br>Copy a file from/to a DOS filesystem (no mounting necessary). E.g.,
+        <tt>mcopy a:\autoexec.bat ~/junk </tt>. See
+        <tt>man mtools</tt> for related commands: mdir, mcd, mren, mmove, mdel, mmd, mrd, mformat ....
+    </p>
+    <p>
+        <tt>mv s<i>ource destination</i></tt>
+        <br>Move or rename files. The same command is used for moving and renaming files and directories.
+    </p>
+    <p>
+        <tt>ln
+            <i>source destination</i></tt>
+        <br>Create a hard link called <i>destination</i> to the file called <i>source</i>. The link appears as a copy of the original files, but in reality only one copy of the file is kept, just two (or more) directory entries point to it. Any changes the file are automatically visible throughout. When one directory entry is removed, the other(s) stay(s) intact. The limitation of the hard links are: the files have to be on the same filesystem, hard links to directories or special files are impossible.
+    </p>
+    <p>
+        <tt>ln -s <i>source destination</i></tt>
+        <br>Create a symbolic (soft) link called "destination" to the file called "source". The symbolic link just specifies a path where to look for the file. In contradistinction to hard links, the source and destination don't not have to tbe on the same filesystem. In comparison to hard links, the drawback of symbolic links are: if the original file is removed, the link is "broken", symbolic links can also create circular references (like circular references in spreadsheets or databases, e.g., "a" points to "b" and "b" points back to "a").
+    </p>
+    <p>
+        <tt>rm<i> files</i></tt>
+        <br>Remove (delete) files. You must own the file in order to be able to remove it. On many systems, you will be asked or confirmation of deleation, if you don't want this, use the "-f" (=force) option, e.g.,
+        <tt>rm -f *</tt>&nbsp; will remove all files in my current working directory, no questions asked.
+    </p>
+    <p>
+        <tt>mkdir
+            <i>directory</i></tt>
+        <br>Make a new directory.
+    </p>
+    <p>
+        <tt>rmdir
+            <i>directory</i></tt>
+        <br>Remove an empty directory.
+    </p>
+    <p>
+        <tt>rm -r <i>files</i></tt>
+        <br>(recursive remove) Remove files, directories, and their subdirectories. Careful with this command as root--you can easily remove all files on the system with such a command executed on the top of your directory tree, and there is no undelete in Linux (yet). But if you really wanted to do it (reconsider), here is how (as root):
+        <tt>rm -rf /*</tt>
+    </p>
+    <p>
+        <tt>cat <i>filename</i> | more</tt>
+        <br>View the content of a text file called "filename", one page a time. The "|" is the "pipe" symbol (on many American keyboards it shares the key with "\") The pipe makes the output stop after each screenful. For long files, it is sometimes convenient to use the commands head and tail that display just the beginning and the end of the file. If you happened to use "cat" a binary file and your terminal displays funny characters afterwards, you can restore it with the command "reset".
+    </p>
+
+    <hr>
+</body>
+
+</html>
