@@ -2,7 +2,7 @@ CXX= g++
 CXX_FLAGS= -levent
 
 all:
-	$(CXX) evhttp.cpp $(CXX_FLAGS) -o server
+	$(CXX) -std=c++0x main.cpp $(CXX_FLAGS) -o server
 
 debug:
-	$(CXX) evhttp.cpp -g $(CXX_FLAGS) -o server
+	$(CXX) -std=c++0x main.cpp -g $(CXX_FLAGS) -o server

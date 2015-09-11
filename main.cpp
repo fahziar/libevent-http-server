@@ -32,6 +32,7 @@ void http_cb(struct evhttp_request *r, void *arg){
 	string uri(char_uri);
 	string path = conf.root + uri;
 
+	//printf("Request masuk\n");
 	//Cek apakah file ada
 	bool file_exists = true;
 	struct stat st;
